@@ -29,4 +29,10 @@ public class LoginService {
 
         return false;
     }
+    public void registerUser(LoginDto loginDto) {
+    	User user = new User();
+    	user.setUserName(loginDto.getUserName());
+    	user.setPassword(loginDto.getUserPassword());
+    	userRepository.save(user);
+    }
 }

@@ -28,4 +28,9 @@ public class LoginController {
 
         return false;
     }
+    @PostMapping("/signup")
+    public String signupUser(@RequestBody LoginDto loginDto) {
+    	loginService.registerUser(loginDto);
+    	return"Success";
+    }
 }
