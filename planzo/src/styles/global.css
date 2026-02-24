@@ -1,5 +1,34 @@
-body {
+/* CSS RESET */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f6f9;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background-color: #f3f6fb;
+  color: #1f2937;
+}
+
+/* HEADINGS */
+h1, h2, h3 {
+  font-weight: 600;
+  color: #111827;
+}
+
+h2 {
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+}
+
+/* ROOT */
+#root {
+  width: 100%;
 }

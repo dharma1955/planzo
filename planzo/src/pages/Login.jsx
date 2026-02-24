@@ -8,40 +8,26 @@ const Login = () => {
 
   const handleLogin = () => {
     localStorage.setItem("role", role);
-
-    if (role === "ADMIN") {
-      navigate("/admin-dashboard");
-    } else {
-      navigate("/user-dashboard");
-    }
+    role === "ADMIN"
+      ? navigate("/admin-dashboard")
+      : navigate("/user-dashboard");
   };
 
   return (
     <div className="login-wrapper">
       <div className="login-box">
-        <div className="login-header">
-          <h1>Planzo</h1>
-          <p>Mini Task & Sprint Management System</p>
-        </div>
+        <h1>Planzo</h1>
+        <p>Mini Task & Sprint Management</p>
 
-        <div className="login-form">
-          <label>Select Role</label>
-          <select
-            value={role}
-            onChange={(e) => setRole(e.target.value)}
-          >
-            <option value="USER">Team Member (User)</option>
-            <option value="ADMIN">Administrators</option>
-          </select>
+        <select
+          value={role}
+          onChange={(e) => setRole(e.target.value)}
+        >
+          <option value="USER">Team Member</option>
+          <option value="ADMIN">Administrator</option>
+        </select>
 
-          <button className="login-btn" onClick={handleLogin}>
-            Enter Dashboard
-          </button>
-        </div>
-
-        <div className="login-footer">
-          <small> Mock Hackathon Project</small>
-        </div>
+        <button onClick={handleLogin}>Enter</button>
       </div>
     </div>
   );

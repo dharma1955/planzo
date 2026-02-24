@@ -3,6 +3,7 @@ import "../styles/navbar.css";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const role = localStorage.getItem("role");
 
   const logout = () => {
     localStorage.removeItem("role");
@@ -12,14 +13,13 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar-left">
-        <h2>Planzo MTSS</h2>
+        <h2>Planzo</h2>
+        <span className="role-badge">{role}</span>
       </div>
 
-      <div className="navbar-right">
-        <button className="logout-btn" onClick={logout}>
-          Logout
-        </button>
-      </div>
+      <button className="logout-btn" onClick={logout}>
+        Logout
+      </button>
     </div>
   );
 };
