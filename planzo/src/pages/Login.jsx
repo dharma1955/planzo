@@ -17,16 +17,31 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
-      <div className="login-card">
-        <h2>Planzo MTSS</h2>
+    <div className="login-wrapper">
+      <div className="login-box">
+        <div className="login-header">
+          <h1>Planzo</h1>
+          <p>Mini Task & Sprint Management System</p>
+        </div>
 
-        <select value={role} onChange={(e) => setRole(e.target.value)}>
-          <option value="USER">User</option>
-          <option value="ADMIN">Admin</option>
-        </select>
+        <div className="login-form">
+          <label>Select Role</label>
+          <select
+            value={role}
+            onChange={(e) => setRole(e.target.value)}
+          >
+            <option value="USER">Team Member (User)</option>
+            <option value="ADMIN">Administrators</option>
+          </select>
 
-        <button onClick={handleLogin}>Login</button>
+          <button className="login-btn" onClick={handleLogin}>
+            Enter Dashboard
+          </button>
+        </div>
+
+        <div className="login-footer">
+          <small> Mock Hackathon Project</small>
+        </div>
       </div>
     </div>
   );
