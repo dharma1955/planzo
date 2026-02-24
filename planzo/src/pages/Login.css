@@ -1,0 +1,104 @@
+/* Full screen wrapper */
+.login-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  padding: 20px;
+}
+
+/* Login card */
+.login-box {
+  background: white;
+  width: 400px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Header section */
+.login-header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #2563eb;
+}
+
+.login-header p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Form */
+.login-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.login-form select {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  margin-bottom: 20px;
+  transition: border 0.2s;
+}
+
+.login-form select:focus {
+  outline: none;
+  border: 1px solid #2563eb;
+}
+
+/* Button */
+.login-btn {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #1e40af;
+}
+
+/* Footer */
+.login-footer {
+  margin-top: 20px;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .login-box {
+    width: 100%;
+    padding: 25px;
+  }
+}
